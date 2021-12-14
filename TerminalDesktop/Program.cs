@@ -10,6 +10,7 @@ namespace TerminalDesktop
         {
             //Console.TreatControlCAsInput = true;
             Console.CursorVisible = false;
+            Console.Clear();
             while (true)
             {
                 TopBarFormatter.Shared.Print();
