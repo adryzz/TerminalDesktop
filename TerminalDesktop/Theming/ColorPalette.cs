@@ -4,7 +4,7 @@ namespace TerminalDesktop.Theming
 {
     public struct ColorPalette
     {
-        public static readonly ColorPallette Default = new ColorPallette()
+        public static readonly ColorPalette Default = new ColorPalette()
         {
             Main = Color.Ivory,
             Outline = Color.Aqua,
