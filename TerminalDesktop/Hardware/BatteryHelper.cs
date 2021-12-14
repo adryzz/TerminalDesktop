@@ -11,7 +11,7 @@ namespace TerminalDesktop.Hardware
         /// <returns></returns>
         public static int GetBatteryPercentage()
         {
-            int value = 70;
+            int value = -1;
 
             if (File.Exists(BattFile))
             {
