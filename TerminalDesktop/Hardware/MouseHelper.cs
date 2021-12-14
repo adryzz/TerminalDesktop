@@ -20,17 +20,17 @@ namespace TerminalDesktop.Hardware
                 switch (info.Key)
                 {
                     case ConsoleKey.LeftArrow: 
-                        value.Item1 = -1;
+                        value.Item1 = +1;
                         break;
                             
                     case ConsoleKey.RightArrow:
-                        value.Item1 = +1;
+                        value.Item1 = -1;
                         break;
                     case ConsoleKey.UpArrow:
-                        value.Item2 = -1;
+                        value.Item2 = +1;
                         break;
                     case ConsoleKey.DownArrow:
-                        value.Item2 = +1;
+                        value.Item2 = -1;
                         break;
                 }
             }
