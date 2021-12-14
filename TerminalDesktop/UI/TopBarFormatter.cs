@@ -27,7 +27,7 @@ namespace TerminalDesktop.UI
 
         public void Print()
         {
-            string time = StringUtils.MakeNumbersSevenSegments($"{DateTime.Now:h:mm:ss}");
+            string time = $"{DateTime.Now:h:mm:ss}";
             int batt = BatteryHelper.GetBatteryPercentage();
             string battery = $"{batt}%";
             string username = Environment.UserName;
