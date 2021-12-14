@@ -13,6 +13,7 @@ namespace TerminalDesktop
             while (true)
             {
                 TopBarFormatter.Shared.Print();
+                VerticalBorderFormatter.Shared.Print();
                 BottomBarFormatter.Shared.Print();
             }
         }
