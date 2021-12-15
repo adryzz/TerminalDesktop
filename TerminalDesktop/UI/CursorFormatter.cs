@@ -31,19 +31,21 @@ namespace TerminalDesktop.UI
         private int OldCursorPosY = 5;
         public void Print()
         {
-            OldCursorPosX = CursorPosX;
-            OldCursorPosY = CursorPosY;
-            var movement = MouseHelper.GetEmulatedMouseMovement();
-            CursorPosX -= movement.Item1;
-            CursorPosY -= movement.Item2;
+            if (Program.Config.EnableMouse)
+            {
+                OldCursorPosX = CursorPosX;
+                OldCursorPosY = CursorPosY;
+                var movement = MouseHelper.GetEmulatedMouseMovement();
+                CursorPosX -= movement.Item1;
+                CursorPosY -= movement.Item2;
             
-            CursorPosX = Math.Clamp(CursorPosX, 1, Console.WindowWidth - 2);
-            CursorPosY = Math.Clamp(CursorPosY, 1, Console.WindowHeight - 2);
-            
-            Console.SetCursorPosition(OldCursorPosX, OldCursorPosY);
-            Console.Write(' ');
-            Console.SetCursorPosition(CursorPosX, CursorPosY);
-            Console.Write("🮰");
+                CursorPosX = Math.Clamp(CursorPosX, 1, Console.WindowWidth - 2);
+                CursorPosY = Math.Clamp(CursorPosY, 1, Console.WindowHeight - 2);
+                Console.SetCursorPosition(OldCursorPosX, OldCursorPosY);
+                Console.Write(' ');
+                Console.SetCursorPosition(CursorPosX, CursorPosY);
+                Console.Write("🮰");
+            }
         }
     }
 }

@@ -5,8 +5,9 @@ using TerminalDesktop.UI;
 
 namespace TerminalDesktop
 {
-    public class Program
+    public static class Program
     {
+        public static Configuration Config = new Configuration();
         public static void Main(string[] args)
         {
             //Console.TreatControlCAsInput = true;
