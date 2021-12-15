@@ -56,7 +56,12 @@ namespace TerminalDesktop.UI
             }
             printBattery(batt, battery);
             
-            for (int i = 0; i < (chars / 6)+2; i++)
+            for (int i = 0; i < (chars / 6); i++)
+            {
+                Console.Write('─', ThemeManager.CurrentTheme.Outline);
+            }
+
+            for (int i = 0; i < chars - Console.CursorLeft-totalLength+1; i++)
             {
                 Console.Write('─', ThemeManager.CurrentTheme.Outline);
             }

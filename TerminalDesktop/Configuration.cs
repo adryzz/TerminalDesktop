@@ -4,6 +4,6 @@ namespace TerminalDesktop
 {
     public class Configuration
     {
-        public bool EnableMouse = false;
+        public bool EnableMouse = true;
     }
 }

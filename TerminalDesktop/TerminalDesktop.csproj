@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <PackageReference Include="Colorful.Console" Version="1.2.15" />
+      <PackageReference Include="Pty.Net" Version="0.1.16-pre" />
     </ItemGroup>
 
 </Project>

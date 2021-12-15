@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 using TerminalDesktop.Startup;
+using TerminalDesktop.Terminal;
 using TerminalDesktop.UI;
 
 namespace TerminalDesktop
@@ -8,6 +9,7 @@ namespace TerminalDesktop
     public static class Program
     {
         public static Configuration Config = new Configuration();
+        public static TerminalSelector TerminalHost = new TerminalSelector();
         public static void Main(string[] args)
         {
             //Console.TreatControlCAsInput = true;
@@ -23,6 +25,7 @@ namespace TerminalDesktop
                 TopBarFormatter.Shared.Print();
                 VerticalBorderFormatter.Shared.Print();
                 BottomBarFormatter.Shared.Print();
+                TerminalFormatter.Shared.Print();
                 CursorFormatter.Shared.Print();
             }
         }
